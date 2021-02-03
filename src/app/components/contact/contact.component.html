@@ -1,0 +1,55 @@
+<app-navbar></app-navbar>
+
+<div class="contenedor">
+  <h1>Crear Contacto</h1>
+
+  <mat-card class="cardForm">
+    <form [formGroup]="myForm" (ngSubmit)="addContact()"  #form="ngForm">
+      <mat-form-field appearance="fill">
+        <mat-label>Numero de Identificación</mat-label>
+        <input matInput [(ngModel)]="contact.id" name="id" formControlName="id" required >
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Nombre Completo</mat-label>
+        <input matInput
+               [(ngModel)]="contact.name"
+               name="name"
+               formControlName="name"
+               required >
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Celular</mat-label>
+        <input matInput
+               [(ngModel)]="contact.phone"
+               name="phone"
+               formControlName="phone"
+               required >
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Dirección</mat-label>
+        <input matInput
+               [(ngModel)]="contact.address"
+               name="address"
+               formControlName="address"
+               required >
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Fecha de cumpleaños</mat-label>
+        <input type="date" matInput
+               [(ngModel)]="contact.hbd"
+               name="hbd"
+               formControlName="hbd"
+               required >
+      </mat-form-field>
+
+      <button mat-raised-button color="warn" [ngStyle]="{'margin': '15px', 'background': '#32cb00'}">Guardar</button>
+      <button mat-raised-button color="warn" routerLink="/contactList">Cancelar</button>
+    </form>
+  </mat-card>
+
+
+</div>

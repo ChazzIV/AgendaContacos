@@ -1,0 +1,26 @@
+.mat-list-icon {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.mat-line{
+  color: black;
+}
+
+.fondo {
+  background-color: #bbb5c3;
+  margin-top: 10px;
+}
+
+.contenedor {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 50px 0;
+  height: auto;
+}
+
+.mat-list-icon  {
+  color: #000;
+}
+

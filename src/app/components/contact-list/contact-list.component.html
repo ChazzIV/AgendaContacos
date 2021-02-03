@@ -1,0 +1,28 @@
+<app-navbar></app-navbar>
+
+<mat-grid-list cols="2" rowHeight="8:1">
+  <mat-grid-tile></mat-grid-tile>
+  <mat-grid-tile>
+    <button mat-raised-button color="primary" routerLink="/contact/nuevo" class="btn__create">Nuevo Contacto</button>
+
+  </mat-grid-tile>
+</mat-grid-list>
+
+<div class="contenedor">
+  <mat-list >
+    <mat-list-item  class="fondo" *ngFor="let contacts of contact" >
+      <mat-icon  mat-list-icon [ngStyle]="{'font-size': '40px', 'margin-bottom': '20px', 'width': '50px'}">account_circle</mat-icon>
+      <div mat-line [ngStyle]="{'font-size': '18px' , 'font-weight' : '400'}">{{contacts.name}}</div>
+      <div mat-line [ngStyle]="{'font-size': '14px'}">{{contacts.phone}}</div>
+      <div mat-line [ngStyle]="{'font-size': '12px'}"> {{contacts.hbd |  date: 'dd MMM yyyy'}} </div>
+      <button mat-raised-button color="accent" [ngStyle]="{'margin': '12px', 'background': '#ffeb3b'}"
+              routerLink="/contact/{{contacts.id}}">
+        <mat-icon>create</mat-icon>
+      </button>
+      <button mat-raised-button color="warn" (click)="deleteContact(contacts)">
+        <mat-icon>delete_forever</mat-icon>
+      </button>
+    </mat-list-item>
+  </mat-list>
+</div>
+

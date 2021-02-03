@@ -1,0 +1,16 @@
+<app-navbar></app-navbar>
+<mat-grid-list cols="1" rowHeight="8:1">
+  <mat-grid-tile>
+    <app-cards titulo="Total de Contactos" contador="{{total}}"></app-cards>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <app-cards titulo="Cumpleaños de hoy" contador="{{hbd}}"></app-cards>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <button mat-raised-button color="primary" routerLink="/contactList">
+      <span class="material-icons">groups</span>
+      Mis Contactos
+    </button>
+  </mat-grid-tile>
+</mat-grid-list>
+
